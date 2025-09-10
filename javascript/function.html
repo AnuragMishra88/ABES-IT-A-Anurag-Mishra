@@ -6,19 +6,52 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="xyz">
+            <button onclick="textc()">click</button>
+            </div>
+
+
+    <button onclick="red()">RED</button>
+    <button onclick="green()">green</button>
+    <button onclick="blue()">blue</button>
+    
+    <p id="zz" style="background-color: beige;">
+        hello 
+
+    </p>
+
+
     <script>
-        function abes(){
-            document.write("hi we are student of abes");
-        }
-        function add(a,b){
-            document.write(a+b);
-        }
-        function sub(a,b){
-            document.write(a-b);
+        
+
+        // function abes(){
+        //     document.write("hi we are student of abes");
+        // }
+        // function add(a,b){
+        //     document.write(a+b);
+        // }
+        // function sub(a,b){
+        //     document.write(a-b);
+        // }
+
+        // add(2,3);
+        // sub(5,2);
+
+        const textc=()=>{
+            document.getElementById("zz").innerHTML="HELLO,I AM HERE";
         }
 
-        add(2,3);
-        sub(5,2);
+        const red=()=>{
+            document.getElementById("zz").style.backgroundColor="red";
+        }
+
+        const blue=()=>{
+            document.getElementById("zz").style.backgroundColor="blue";
+        }
+
+        const green=()=>{
+            document.getElementById("zz").style.backgroundColor="green";
+        }
     </script>
     
 </body>
