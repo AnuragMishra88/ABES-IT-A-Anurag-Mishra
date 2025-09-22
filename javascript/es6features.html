@@ -6,13 +6,15 @@
 <body>
     <p id="abc"></p>
     <script>
-        const toy={
+        const toy=new Object({
             toy1:"car",
             toy2:"apple",
             toy3:"truck",
-        }
-        document.getElementById("abc").innerHTML=toy.toy3;
+        });
+        document.getElementById("abc").innerHTML=toy.toy1;
+        document.getElementById("abc").style.fontSize="200px";
         
+
 
     </script>
     
