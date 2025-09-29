@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // function getdata(dataid){
+    //   setTimeout(()=>{
+    //     console.log(dataid);
+    //   },3000);
+      
+    // }
+    // getdata(2);
+    //   getdata(4);
+    //   getdata(5);
+    //   getdata(7);
+
+
+    //Callback hell
+    function getdata(dataid,getnextdata){
+      setTimeout(()=>{
+        console.log(dataid);
+        if(getnextdata){
+          getnextdata();
+        }
+      },3000);
+      
+    }
+    getdata(2,()=>{
+      getdata(3,()=>{
+        getdata(4,()=>{
+        
+        });
+      });
+    });
+      
+
+  </script>
+</body>
+</html>
