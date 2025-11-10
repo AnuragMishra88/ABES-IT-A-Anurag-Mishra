@@ -1,20 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React from "react";
+
 import './App.css'
-import Book from './Book'
+import Navbar from './Navbar.jsx'
+
+import Home from './Home.jsx'
+import About from './About.jsx'
+import Login from './Login.jsx'
+import Signup from './Signup.jsx'
+import Contact from './Contact.jsx'
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+
+
 
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
-    <>
-    <Book/>
-     <Book/>
-      <Book/>
-
-
+  
+    <><div className='App'>
+      <Navbar/>
+<h1>BOOK APP</h1>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About/>} />
+        <Route path='/contact' element={<Contact/>} />
+        <Route path='/signup' element={<Signup/>} />
+        <Route path='/login' element={<Login/>} />
+      </Routes>
+    
+      
+      </div>
     </>
+   
   )
 }
 
