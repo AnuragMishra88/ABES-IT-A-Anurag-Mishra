@@ -16,11 +16,8 @@ import {
   Link
 } from "react-router-dom";
 
-
-
 function App() {
   return (
-  
     <><div className='App'>
       <Navbar/>
 <h1>BOOK APP</h1>
