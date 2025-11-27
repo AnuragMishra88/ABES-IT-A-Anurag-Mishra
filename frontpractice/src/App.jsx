@@ -21,11 +21,12 @@ function App() {
     .catch((err)=>{
       console.log(err);
     })
-  })
+  },[]);
+
   return (
     <div className="App">
       {Fa1.map((Fa1, i) => (
-        <div key={Fa1.id}>
+        <div key={Fa1.id} className='AOP'>
           <h3>{Fa1.name}    {Fa1.class}</h3>
           <hr></hr>
         </div>

@@ -2,11 +2,15 @@ const express=require('express');
 const app=express();
 const cors=require('cors');
 const port=8080;
+// const img=require('./download(3).jpg');
+
+
 
 app.use(cors({
   origin: 'http://localhost:5173'
 }));
 
+app.use('/backend', express.static('backend'));
 
 app.get('/',(req,res)=>{
   res.send('<h1>Hi this is my first server</h1>'); 
@@ -19,27 +23,32 @@ app.get('/api/about',(req,res)=>{
     {
       id:1,
       name:'Anurag',
-      class: 5
+      class: 5,
+      image: "backend/download.jpg"
     },
     {
       id:2,
       name:'Anura',
-      class: 6
+      class: 6,
+      image: "backend/download.jpg"
     },
     {
       id:3,
       name:'Anur',
-      class: 5
+      class: 5,
+      image: "backend/download.jpg"
     },
     {
       id:4,
       name:'Anu',
-      class: 5
+      class: 5,
+      image: "backend/download.jpg"
     },
     {
       id:5,
       name:'Garuna',
-      class: 5
+      class: 5,
+      image: "backend/download.jpg"
     },
   ];
   res.json(student);
